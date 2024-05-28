@@ -1,0 +1,225 @@
+/* style.css */
+* {
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    color: #333;
+    width: 100%;
+}
+
+.header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.contenido {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 15px; /* Añadir margen superior para separar del header */
+}
+
+.intro, .upload-section {
+    margin-bottom: 20px;
+    text-align: center; /* Centrar los textos */
+}
+
+.intro img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-top: 20px;
+}
+
+h1, h2 {
+    margin: 0 0 20px;
+    text-align: center; /* Centrar los títulos */
+}
+
+p {
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: center; /* Centrar los párrafos */
+}
+
+form, .record-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="file"] {
+    display: none; /* Ocultar el verdadero input de tipo archivo */
+}
+
+.file-input-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Alinear verticalmente */
+    width: 100%;
+}
+
+#customFileButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 3px solid #040c64;
+    color: #f0f0f0;
+    background-color: #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+#customFileButton i {
+    margin-right: 10px; /* Espacio entre el icono y el texto */
+}
+
+#customFileButton:hover {
+    background: #55a5fa;
+    color: #fff;
+}
+
+#fileName {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #55a5fa;
+    width: 100%;
+    text-align: center; /* Centrar el texto del nombre del archivo */
+}
+
+input, button {
+    margin: 10px;
+    padding: 10px 20px; /* Mantener el padding original */
+    font-size: 16px;
+    border: 3px solid #040c64;
+    color: #f0f0f0;
+    background-color: #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    width: 100%; /* Ajuste de ancho completo para mejor responsividad */
+    max-width: 400px; /* Incrementar el ancho máximo para hacer los botones más anchos */
+}
+
+input:hover, button:hover {
+    background: #55a5fa;
+    color: #fff;
+}
+
+#loading {
+    color: #007bff;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centrar verticalmente el spinner */
+    height: 100px; /* Altura para centrar verticalmente el spinner */
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #007bff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+.Import {
+    color: #007bff;
+    font-size: 24px;
+}
+
+.Paragraph {
+    color: #007bff;
+    font-size: 21px;
+}
+
+#transcription {
+    color: #007bff;
+    font-size: 19px;
+}
+
+#uploadButton {
+    margin: 10px;
+    padding: 10px 20px; /* Mantener el padding original */
+    font-size: 16px;
+    border: 3px solid #040c64;
+    color: #ffffff;
+    background-color: #9c29df;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    width: 100%; /* Ajuste de ancho completo para mejor responsividad */
+    max-width: 400px; /* Incrementar el ancho máximo para hacer los botones más anchos */
+}
+
+#result {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#transcription {
+    color: #007bff;
+    font-size: 19px;
+}
+
+#sentiment {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #ab9328;
+}
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    input, button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .intro img {
+        max-width: 100%;
+    }
+
+    .contenido {
+        padding: 10px;
+        margin-top: 10px; /* Ajustar margen superior para separar del header */
+    }
+}
